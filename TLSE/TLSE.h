@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct lse{
+  int info;
+  struct lse *prox; 
+}TLSE;
+
+TLSE* TLSE_inicializa(void);
+
+TLSE* TLSE_ins_ini(TLSE* l, int elem);
+TLSE* TLSE_ins_fim(TLSE* l, int elem);
+TLSE* TLSE_ins_fim_rec(TLSE* l, int elem);
+TLSE* TLSE_ins_ord(TLSE* l, int elem);
+TLSE* TLSE_ins_ord_rec(TLSE* l, int elem);
+
+void TLSE_imprime(TLSE* l);
+void TLSE_imp_rec(TLSE* l);
+void TLSE_imp_rec_rev(TLSE* l);
+
+void TLSE_libera(TLSE* l);
+void TLSE_lib_rec(TLSE* l);
+
+void inverte_modifica(TLSE** l);
+TLSE * inverte(TLSE* l);
+TLSE * desloca (TLSE* l, int n);
+TLSE *copia (TLSE *l);
+
+TLSE* TLSE_busca(TLSE* l, int elem);
+TLSE* TLSE_busca_rec(TLSE* l, int elem);
+
+TLSE* i_p (TLSE *l);
+
+TLSE* TLSE_retira(TLSE* l, int elem);
+TLSE* TLSE_retira_rec(TLSE* l, int elem);
+TLSE* TLSE_retira_pos(TLSE* l, int pos);
+TLSE* rto (TLSE* l, int elem);
+
